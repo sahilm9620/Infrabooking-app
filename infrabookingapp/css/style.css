@@ -1,0 +1,107 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+.nav_element {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    text-decoration: none;
+    color: white;
+    text-transform: capitalize;
+}
+
+.nav_element:hover {
+    /* background-color: #86475f;
+    overflow: hidden;
+     */
+    font-weight: bold;
+}
+
+.background {
+    background-color: #621B36;
+}
+
+.error_msg {
+    color: #621B36;
+    background: rgb(255, 200, 200)
+}
+
+.footer {
+    background-color: #621B36;
+    color: white;
+    text-align: center;
+}
+
+.link {
+    font: small-caps;
+    text-align: center;
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+.link_text {
+    color: #621B36;
+}
+
+.link_text:hover {
+    font-weight: bold;
+}
+
+.heading {
+    padding-top: 30px;
+    padding-bottom: -10px;
+    text-align: center;
+    color: #621B36;
+}
+
+.footer_heighlight:hover {
+    font-weight: bold;
+}
+
+.mytable {
+    padding: 500px;
+}
+
+
+/* table_row:hover {
+    border: #621B36;
+    background-color: aliceblue;
+} */
+
+.line-1 {
+    width: 24em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255, 255, 255, .75);
+    font-size: 180%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);
+}
+
+
+/* Animation */
+
+.anim-typewriter {
+    animation: typewriter 4s steps(15) 1s infinite normal both, blinkTextCursor 500ms steps(15) infinite normal;
+}
+
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+    to {
+        width: 10em;
+    }
+}
+
+@keyframes blinkTextCursor {
+    from {
+        border-right-color: rgba(255, 255, 255, .75);
+    }
+    to {
+        border-right-color: transparent;
+    }
+}

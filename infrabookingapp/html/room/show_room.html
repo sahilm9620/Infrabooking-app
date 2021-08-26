@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Add Room</title>
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <!-- icon logo -->
+    <link rel="icon" href="../images/favicon.ico" type="image/icon type">
+    <script src="../../js/session.js"></script>
+    <!-- external css -->
+    <link rel="stylesheet" href="../../css/style.css">
+
+
+
+
+    <script src="../../js/Room_update.js"></script>
+    <!-- jquery cdn file -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script>
+        $(function() {
+            $("#includedHeader").load("../header.html");
+        });
+
+        $(function() {
+            $("#includedFooter").load("../footer.html");
+        });
+    </script>
+</head>
+
+<body onload="check_session()">
+
+    <h1 class="background"> <img src="../images/logo1.png"> </h1>
+
+    <header>
+
+
+    </header>
+    <nav class="container-fluid background">
+        <a href="../index.html" class="nav_element" style=" color: white;">HOME  </a>
+
+
+        <a href="../user/login.html" class="nav_element" style=" color: white;" id="nav_login">LOGIN </a>
+
+
+        <a href="../user/register.html" class="nav_element" style=" color: white;" id="nav_registration">REGISTRATION</a>
+
+        <a href="../booking/book_room.html" class="nav_element" style=" color: white;" id="nav_book_room">BOOK ROOM </a>
+        <a href="add_room.html" class="nav_element" style=" color: white;" id="nav_add_room">ADD ROOMS </a>
+        <a href="show_room.html" class="nav_element" style=" color: white;" id="nav_show_all_room">SHOW ALL ROOMS </a>
+
+        <a href="#" class="nav_element" style=" color: white;">ABOUT US </a>
+        <a href="../user/login.html" class="nav_element" style=" color: white;" id="nav_logout" onclick="clearSession()">LOGOUT </a>
+    </nav>
+
+
+
+    <section class="container-sm  col-sm-12 col-md-4 col-lg-4">
+
+        <section class="card-body">
+
+
+            <table class="table table-hover table-borderless mytable">
+
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>NAME</th>
+                        <th colspan="2">ACTION</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td>
+                            <a href="#" style="text-decoration: none;">   1 </a>
+                        </td>
+                        <td>
+                            Meeting Room
+                        </td>
+                        <td>
+                            <a href="#" onclick="confirm_deleteRoom()"> <img src="../images/delete_logo.png" title="Delete"></a>
+                        </td>
+                        <td>
+                            <a href="#" onclick="confirm_updateRoom()"> <img src="../images/update_logo.png" title="Update"></a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <a href="#" style="text-decoration: none;">   2 </a>
+                        </td>
+                        <td>
+                            Board Room
+                        </td>
+                        <td>
+                            <a href="#" onclick="confirm_deleteRoom()"> <img src="../images/delete_logo.png" title="Delete"></a>
+                        </td>
+                        <td>
+                            <a href="#" onclick="confirm_updateRoom()"> <img src="../images/update_logo.png" title="Update"></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#" style="text-decoration: none;">   3 </a>
+                        </td>
+                        <td>
+                            conference Room
+                        </td>
+                        <td>
+                            <a href="#" onclick="confirm_deleteRoom()"> <img src="../images/delete_logo.png" title="Delete"></a>
+                        </td>
+                        <td>
+                            <a href="#" onclick="confirm_updateRoom()"> <img src="../images/update_logo.png" title="Update"></a>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#" style="text-decoration: none;">   4 </a>
+                        </td>
+                        <td>
+                            celebration Room
+                        </td>
+                        <td>
+                            <a href="#" onclick="confirm_deleteRoom()"> <img src="../images/delete_logo.png" title="Delete"></a>
+                        </td>
+                        <td>
+                            <a href="#" onclick="confirm_updateRoom()"> <img src="../images/update_logo.png" title="Update"></a>
+                        </td>
+                    </tr>
+                    <tr>
+
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </section>
+</body>
+
+<section id="includedFooter"></section>
+
+
+</html>
