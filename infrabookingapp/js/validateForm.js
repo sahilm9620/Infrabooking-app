@@ -1,13 +1,13 @@
 // Login Form Validation
 function validateLoginForm() {
-    //collect form data in JavaScript variables  
-    var email = document.getElementById("email").value;
-    var password = document.getElementById("password").value;
+    //collect form data in JavaScript letiables  
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
 
-    var id_email = document.getElementById("email");
-    var id_error_msg = document.getElementById("blankMsg");
-    var id_btn_login = document.getElementById("btn_login");
-    var id_password = document.getElementById('password');
+    let id_email = document.getElementById("email");
+    let id_error_msg = document.getElementById("blankMsg");
+    let id_btn_login = document.getElementById("btn_login");
+    let id_password = document.getElementById('password');
 
 
     // email validation
@@ -75,18 +75,18 @@ function validateLoginForm() {
 
 // Registartion Form Validation
 function validateRegisterForm() {
-    //collect form data in JavaScript variables 
-    var name = document.getElementById("name").value;
-    var email = document.getElementById("email").value;
-    var pw1 = document.getElementById("password").value;
-    var pw2 = document.getElementById("cpassword").value;
+    //collect form data in JavaScript letiables 
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let pw1 = document.getElementById("password").value;
+    let pw2 = document.getElementById("cpassword").value;
 
-    var id_error = document.getElementById("blankMsg");
-    var id_name = document.getElementById('name');
-    var id_btn_register = document.getElementById("btn_register");
-    var id_email_reg = document.getElementById('email');
-    var id_password_reg = document.getElementById('password');
-    var id_cpassword_reg = document.getElementById('cpassword');
+    let id_error = document.getElementById("blankMsg");
+    let id_name = document.getElementById('name');
+    let id_btn_register = document.getElementById("btn_register");
+    let id_email_reg = document.getElementById('email');
+    let id_password_reg = document.getElementById('password');
+    let id_cpassword_reg = document.getElementById('cpassword');
 
     //check empty first name field  
     if (name == "" || name === null) {
@@ -205,16 +205,16 @@ function validateRegisterForm() {
 
 // Validate Add room Form
 function validateAddRoomForm() {
-    //collect form data in JavaScript variables  
+    //collect form data in JavaScript letiables  
 
 
-    var room_name = document.getElementById("room_name").value;
-    var capacity = document.getElementById("capacity").value;
+    let room_name = document.getElementById("room_name").value;
+    let capacity = document.getElementById("capacity").value;
 
-    var id_error_room = document.getElementById("blankMsg");
-    var id_room_name = document.getElementById('room_name');
-    var id_btn_add_room = document.getElementById("btn_add_room");
-    var id_capacity = document.getElementById('capacity');
+    let id_error_room = document.getElementById("blankMsg");
+    let id_room_name = document.getElementById('room_name');
+    let id_btn_add_room = document.getElementById("btn_add_room");
+    let id_capacity = document.getElementById('capacity');
 
 
     if (room_name == "" || room_name === null) {
@@ -284,15 +284,15 @@ function validateAddRoomForm() {
 // Book Room Validation
 
 function validateBookRoomForm() {
-    //collect form data in JavaScript variables  
-    var date = document.getElementById("date").value;
-    var description = document.getElementById("description").value;
+    //collect form data in JavaScript letiables  
+    let date = document.getElementById("date").value;
+    let description = document.getElementById("description").value;
 
 
-    var id_error_bookRoom = document.getElementById("blankMsg");
-    var id_date = document.getElementById('date');
-    var id_btn_check_available = document.getElementById("btn_check_available");
-    var id_description = document.getElementById('description');
+    let id_error_bookRoom = document.getElementById("blankMsg");
+    let id_date = document.getElementById('date');
+    let id_btn_check_available = document.getElementById("btn_check_available");
+    let id_description = document.getElementById('description');
     // date validation
     if (date == "" || date === null) {
         id_error_bookRoom.innerHTML = "*Date Required";

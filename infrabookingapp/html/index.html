@@ -34,16 +34,16 @@
 
 </head>
 
-<body onload="check_session()">
+<body onload="check_session('false')">
 
-    <h1 class="background"> <img src="images/logo1.png"> </h1>
+    <h1 class="img-fluid img-thumbnail background"> <img src="images/logo1.png"> </h1>
     <!-- header start -->
     <header>
         <strong><h3 class=" line-1 anim-typewriter heading">INFRABOOKING APP</h3></strong>
 
     </header>
     <!-- header end -->
-    <nav class="container-fluid background">
+    <!-- <nav class="container-fluid background">
         <a href="index.html" class="nav_element" style=" color: white;">HOME </a>
 
 
@@ -58,11 +58,40 @@
 
         <a href="#" class="nav_element" style=" color: white;">ABOUT US </a>
         <a href="user/login.html" class="nav_element" style=" color: white;" id="nav_logout" onclick="clearSession()">LOGOUT </a>
+    </nav> -->
+
+    <nav class="navbar navbar-expand-lg  " style="background-color: #621B36; color: white;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" style="color: white; font-weight: bold;">INFRABOOKING APP</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link nav_element" aria-current="page" href="#" style="color: white;">Home</a>
+                    <a class="nav-link nav_element" href="user/login.html" style="color: white;" id="nav_login">Login</a>
+                    <a class="nav-link nav_element" href="user/register.html" style="color: white;" id="nav_registration">Registration</a>
+                    <a class="nav-link nav_element" href="booking/book_room.html" style="color: white;" id="nav_book_room">Book room</a>
+                    <a class="nav-link nav_element" href="room/add_room.html" style="color: white;" id="nav_add_room">Add room</a>
+                    <a class="nav-link nav_element" href="room/show_room.html" style="color: white;" id="nav_show_all_room">Show all room</a>
+                    <a class="nav-link nav_element" href="#" style="color: white;">About us</a>
+                    <a class="nav-link nav_element" href="user/login.html" style="color: white; " id="nav_logout" onclick="clearSession()">Logout</a>
+
+
+
+
+
+
+
+
+                </div>
+            </div>
+        </div>
     </nav>
 
 
     <!-- carousel start -->
-    <section id="carouselExampleInterval" class="carousel slide " data-bs-ride="carousel">
+    <section id="carouselExampleInterval" class="carousel slide container" data-bs-ride="carousel">
         <section class="carousel-inner ">
             <section class="carousel-item active" data-bs-interval="2000">
                 <img src="images/slide2.jpg" class="d-block w-100" alt="..." height="500" width="300">

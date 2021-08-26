@@ -4,14 +4,16 @@
 <head>
     <title>Login</title>
     <!-- fonts -->
+
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 
     <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link href="../../css/bootstrap/bootstrap.min.css" rel="stylesheet">
     <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
     <!-- icon logo -->
     <link rel="icon" href="../images/favicon.ico" type="image/icon type">
     <!-- external css -->
@@ -37,17 +39,17 @@
 </head>
 
 
-<body onload="check_session()">
+<body onload="check_session('false')">
 
 
-    <h1 class="background"> <img src="../images/logo1.png"> </h1>
+    <h1 class="img-fluid img-thumbnail background"> <img src="../images/logo1.png"> </h1>
     <!-- header start -->
     <header>
 
 
     </header>
     <!-- header end -->
-    <nav class="container-fluid background ">
+    <!-- <nav class="container-fluid background navbar navbar-expand-lg navbar-collapse ">
 
         <a href="../index.html" class="nav_element " style=" color: white;">HOME  </a>
 
@@ -64,7 +66,30 @@
         <a href="#" class="nav_element" style=" color: white;">ABOUT US </a>
         <a href="login.html" class="nav_element" style=" color: white;" id="nav_logout" onclick="clearSession()">LOGOUT </a>
 
+    </nav> -->
+
+    <nav class="navbar navbar-expand-lg  " style="background-color: #621B36; color: white;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" style="color: white; font-weight: bold;">INFRABOOKING APP</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link nav_element" aria-current="page" href="../index.html" style="color: white;">Home</a>
+                    <a class="nav-link nav_element active" href="#" style="color: white;" id="nav_login">Login</a>
+                    <a class="nav-link nav_element" href="register.html" style="color: white;" id="nav_registration">Registration</a>
+                    <a class="nav-link nav_element" href="../booking/book_room.html" style="color: white;" id="nav_book_room">Book room</a>
+                    <a class="nav-link nav_element" href="../room/add_room.html" style="color: white;" id="nav_add_room">Add room</a>
+                    <a class="nav-link nav_element" href="../room/show_room.html" style="color: white;" id="nav_show_all_room">Show all room</a>
+                    <a class="nav-link nav_element" href="#" style="color: white;">About us</a>
+                    <a class="nav-link nav_element" href="login.html" style="color: white;" id="nav_logout" onclick="clearSession()">Logout</a>
+                </div>
+            </div>
+        </div>
     </nav>
+
+
     <!-- <section id="includedHeader">
 
     </section> -->
@@ -82,19 +107,19 @@
 
                     <section class="mb-3 ">
                         <label for="uname" class="form-label "> Email Id</label>
-                        <input class="form-control " type="text " placeholder="Type your email id " name="email" id="email" onkeyup="validateLoginForm()" required autofocus>
+                        <input class="form-control " type="text " placeholder="Type your email id " name="email" id="email" onblur onkeyup="validateLoginForm()" required autofocus>
 
                     </section>
                     <section class="mb-3 ">
                         <label for="pass " class="form-label ">Password</label>
-                        <input type="password" class="form-control " placeholder="Type your password " name="pass" id="password" onkeyup="validateLoginForm()" required>
+                        <input type="password" class="form-control " placeholder="Type your password " name="pass" id="password" onblur onkeyup="validateLoginForm()" required>
 
                     </section>
 
 
 
                     <section class="d-grid gap-1 col-6 mx-auto ">
-                        <button class="btn btn-danger background " style="background-color: #621B36;" type="submit " name="login " id="btn_login" onmouseover="Login_session()" disabled>
+                        <button class="btn btn-danger background " style="background-color: #621B36;" type="submit " name="login" id="btn_login" onmouseover="Login_session()" disabled>
                             <strong>Login</strong>
                         </button>
 
