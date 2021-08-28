@@ -7,91 +7,58 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-
-
-    <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <!-- bootstrap CSS  -->
+    <link href="../css/bootstrap/bootstrap.min.css" rel="stylesheet">
     <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script src="../css/bootstrap/bootstrap.bundle.min.js"></script>
     <!-- icon logo -->
     <link rel="icon" href="images/favicon.ico" type="image/icon type">
+    <!-- js for session management -->
     <script src="../js/session.js"></script>
+    <!-- own css  -->
     <link rel="stylesheet" href="../css/style.css">
     <!-- jquery cdn file -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <!-- to load footer file -->
     <script>
-        $(function() {
-            $("#includedHeader").load("header.html");
-        });
-
         $(function() {
             $("#includedFooter").load("footer.html");
         });
     </script>
-
-
-
 </head>
 
-<body onload="check_session('false')">
-
-    <h1 class="img-fluid img-thumbnail background"> <img src="images/logo1.png"> </h1>
+<body onload="addDatabase()">
     <!-- header start -->
     <header>
+        <h1 class="img-fluid img-thumbnail background"> <img src="images/logo1.png"> </h1>
         <strong><h3 class=" line-1 anim-typewriter heading">INFRABOOKING APP</h3></strong>
-
     </header>
-    <!-- header end -->
-    <!-- <nav class="container-fluid background">
-        <a href="index.html" class="nav_element" style=" color: white;">HOME </a>
+    <!-- header End -->
 
-
-        <a href="user/login.html" class="nav_element" style=" color: white;" id="nav_login">LOGIN </a>
-
-
-        <a href="user/register.html" class="nav_element" style=" color: white;" id="nav_registration">REGISTRATION</a>
-
-        <a href="booking/book_room.html" class="nav_element" style=" color: white;" id="nav_book_room">BOOK ROOM </a>
-        <a href="room/add_room.html" class="nav_element" style=" color: white;" id="nav_add_room">ADD ROOMS </a>
-        <a href="room/show_room.html" class="nav_element" style=" color: white;" id="nav_show_all_room">SHOW ALL ROOMS </a>
-
-        <a href="#" class="nav_element" style=" color: white;">ABOUT US </a>
-        <a href="user/login.html" class="nav_element" style=" color: white;" id="nav_logout" onclick="clearSession()">LOGOUT </a>
-    </nav> -->
-
-    <nav class="navbar navbar-expand-lg  " style="background-color: #621B36; color: white;">
+    <!-- navbar start -->
+    <nav class="navbar navbar-expand-lg navbar navbar-dark  " style="background-color: #621B36; color: white;">
         <div class="container-fluid">
             <a class="navbar-brand" href="#" style="color: white; font-weight: bold;">INFRABOOKING APP</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-link nav_element" aria-current="page" href="#" style="color: white;">Home</a>
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link nav_element active active_nav" aria-current="page" href="#" style="color: white;">Home</a>
                     <a class="nav-link nav_element" href="user/login.html" style="color: white;" id="nav_login">Login</a>
                     <a class="nav-link nav_element" href="user/register.html" style="color: white;" id="nav_registration">Registration</a>
                     <a class="nav-link nav_element" href="booking/book_room.html" style="color: white;" id="nav_book_room">Book room</a>
                     <a class="nav-link nav_element" href="room/add_room.html" style="color: white;" id="nav_add_room">Add room</a>
                     <a class="nav-link nav_element" href="room/show_room.html" style="color: white;" id="nav_show_all_room">Show all room</a>
                     <a class="nav-link nav_element" href="#" style="color: white;">About us</a>
-                    <a class="nav-link nav_element" href="user/login.html" style="color: white; " id="nav_logout" onclick="clearSession()">Logout</a>
-
-
-
-
-
-
-
-
+                    <a class="nav-link nav_element" href="user/login.html" style="color: white; " id="nav_logout" onclick="clearSession()"> Logout</a>
+                    <span class="user_name nav-link nav_element " id="id_user_name" style="color: white;"> </span>
                 </div>
             </div>
         </div>
     </nav>
-
-
     <!-- carousel start -->
-    <section id="carouselExampleInterval" class="carousel slide container" data-bs-ride="carousel">
+    <section id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
         <section class="carousel-inner ">
             <section class="carousel-item active" data-bs-interval="2000">
                 <img src="images/slide2.jpg" class="d-block w-100" alt="..." height="500" width="300">
@@ -114,8 +81,7 @@
     </section>
     <!-- carousel end -->
 </body>
-
+<!-- included footer file -->
 <section id="includedFooter"></section>
-
 
 </html>

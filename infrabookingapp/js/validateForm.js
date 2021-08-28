@@ -9,7 +9,6 @@ function validateLoginForm() {
     let id_btn_login = document.getElementById("btn_login");
     let id_password = document.getElementById('password');
 
-
     // email validation
     if (email == "" || email === null) {
         id_error_msg.innerHTML = "*Email Required";
@@ -29,7 +28,6 @@ function validateLoginForm() {
 
     }
 
-
     //check empty password field  
     if (password == "" || password === null) {
         id_error_msg.innerHTML = "*Password Required";
@@ -41,9 +39,6 @@ function validateLoginForm() {
         id_password.style.borderColor = "";
         id_btn_login.removeAttribute("disabled");
     }
-
-
-
 
     //minimum password length validation  
     if (password.length < 8) {
@@ -57,7 +52,6 @@ function validateLoginForm() {
         id_btn_login.removeAttribute("disabled", "disabled");
     }
 
-
     //maximum length of password validation  
     if (password.length > 15) {
         id_error_msg.innerHTML = "*Password length must not exceed 15 characters";
@@ -70,9 +64,7 @@ function validateLoginForm() {
         id_btn_login.removeAttribute("disabled", "disabled")
     }
 
-
 }
-
 // Registartion Form Validation
 function validateRegisterForm() {
     //collect form data in JavaScript letiables 
@@ -318,9 +310,6 @@ function validateBookRoomForm() {
         id_description.style.borderColor = "";
         id_btn_check_available.removeAttribute("disabled");
     }
-
-
-
 
     //minimum description length validation  
     if (description.length < 8) {

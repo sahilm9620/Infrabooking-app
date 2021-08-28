@@ -8,26 +8,20 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 
-    <!-- CSS only -->
+    <!-- Bootstrap CSS & JS  -->
     <link href="../../css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <script src="../../css/bootstrap/bootstrap.bundle.min.js"></script>
+
     <!-- icon logo -->
     <link rel="icon" href="../images/favicon.ico" type="image/icon type">
     <script src="../../js/session.js"></script>
-    <!-- external css -->
+    <!-- external css & JS-->
     <link rel="stylesheet" href="../../css/style.css">
-
-
-
-
     <script src="../../js/Room_update.js"></script>
     <!-- jquery cdn file -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <!-- script to load footer -->
     <script>
-        $(function() {
-            $("#includedHeader").load("../header.html");
-        });
-
         $(function() {
             $("#includedFooter").load("../footer.html");
         });
@@ -35,51 +29,44 @@
 </head>
 
 <body onload="check_session('true')">
-
-    <h1 class="img img-thumbnail background"> <img src="../images/logo1.png"> </h1>
-
     <header>
-
-
+        <h1 class="img img-thumbnail background"> <img src="../images/logo1.png"> </h1>
     </header>
-
-
-    <nav class="navbar navbar-expand-lg  " style="background-color: #621B36; color: white;">
+    <!-- navbar start -->
+    <nav class="navbar navbar-expand-lg navbar navbar-dark  " style="background-color: #621B36; color: white;">
         <div class="container-fluid">
             <a class="navbar-brand" href="#" style="color: white; font-weight: bold;">INFRABOOKING APP</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
+            <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
+                <div class="navbar-nav ms-auto">
                     <a class="nav-link nav_element" aria-current="page" href="../index.html" style="color: white;">Home</a>
                     <a class="nav-link nav_element" href="../user/login.html" style="color: white;" id="nav_login">Login</a>
                     <a class="nav-link nav_element" href="../user/register.html" style="color: white;" id="nav_registration">Registration</a>
                     <a class="nav-link nav_element" href="../booking/book_room.html" style="color: white;" id="nav_book_room">Book room</a>
                     <a class="nav-link nav_element" href="add_room.html" style="color: white;" id="nav_add_room">Add room</a>
-                    <a class="nav-link nav_element" href="#" style="color: white;" id="nav_show_all_room">Show all room</a>
+                    <a class="nav-link nav_element active" href="#" style="color: white;" id="nav_show_all_room">Show all room</a>
                     <a class="nav-link nav_element" href="#" style="color: white;">About us</a>
                     <a class="nav-link nav_element" href="../user/login.html" style="color: white;" id="nav_logout" onclick="clearSession()">Logout</a>
+                    <span class="user_name nav-link nav_element" id="id_user_name" style="color: white;"> </span>
                 </div>
             </div>
         </div>
     </nav>
-
+    <!-- navbar end -->
 
     <div class="container">
+        <!-- row start -->
         <div class="row">
             <div class="col-2">
-
             </div>
+            <!-- table start -->
             <div class="col-6">
-                <!-- 2 of 3 (wider) -->
                 <section class="container ">
-
                     <section class="card-body">
-
-                        <h2> Room Details</h2>
+                        <h2 class="text-center"><strong>Room </strong> Details</h2>
                         <table class="table table-hover table-borderless mytable">
-
                             <thead>
                                 <tr>
                                     <th>ID</th>
@@ -88,7 +75,6 @@
                                 </tr>
                             </thead>
                             <tbody>
-
                                 <tr>
                                     <td>
                                         <a href="#" style="text-decoration: none;" onclick="show_room(1)">   1 </a>
@@ -103,7 +89,6 @@
                                         <a href="#" onclick="confirm_updateRoom()"> <img src="../images/update_logo.png" title="Update"></a>
                                     </td>
                                 </tr>
-
                                 <tr>
                                     <td>
                                         <a href="#" style="text-decoration: none;" onclick="show_room(2)">   2 </a>
@@ -131,7 +116,6 @@
                                     <td>
                                         <a href="#" onclick="confirm_updateRoom()"> <img src="../images/update_logo.png" title="Update"></a>
                                     </td>
-
                                 </tr>
                                 <tr>
                                     <td>
@@ -148,13 +132,15 @@
                                     </td>
                                 </tr>
                                 <tr>
-
                                 </tr>
                             </tbody>
                         </table>
                     </section>
                 </section>
             </div>
+            <!-- table end -->
+
+            <!-- room description start -->
             <div class="col">
                 <aside>
                     <label id="room_details" style="display: none;">
@@ -166,40 +152,17 @@
                             </div>
                             <ul class="list-group list-group-flush">
                               <li class="list-group-item" id="room_capacity">An item</li>
-                              
                             </ul>
-                           
                           </div>
-                            
                         </label>
-
                 </aside>
-
             </div>
+            <!-- room description end -->
         </div>
+        <!-- row end  -->
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </body>
-
+<!-- loading footer  -->
 <section id="includedFooter"></section>
-
 
 </html>
